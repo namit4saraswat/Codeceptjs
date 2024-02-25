@@ -1,0 +1,22 @@
+{
+  "name": "ui-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "codecept.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx codeceptjs run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.5.14",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.41.2",
+    "selenium-standalone": "^9.3.3",
+    "webdriverio": "^8.32.3"
+  }
+}
