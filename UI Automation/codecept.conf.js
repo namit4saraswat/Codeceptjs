@@ -62,9 +62,13 @@ exports.config = {
   ],
   name: 'UI Automation',
   bootstrap: async function(){
-    // I.amOnPage(process.env.url)
+    // event.dispatcher.on(event.test.before, test => {
+    //   this.testName = test.title;
+    // })
   },
   bootstrapAll: async function(){
-    
+    // event.dispatcher.on(event.test.before, test => {
+    //   this.testName = test.title;
+    // })
   }
 }
