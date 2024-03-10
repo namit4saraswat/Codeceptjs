@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "npx codeceptjs run",
-    "debug": "npx codeceptjs run --debug"
+    "debug": "npx codeceptjs run --debug",
+    "allBrowser": "npx codeceptjs run-workers 2 browserGroup"
   },
   "keywords": [],
   "author": "",

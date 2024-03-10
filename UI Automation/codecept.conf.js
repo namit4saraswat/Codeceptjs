@@ -6,7 +6,7 @@ exports.config = {
   helpers: process.env.webdriver === 'Playwright' ? {
     Playwright: {
       browser: 'chromium',
-      url: 'https://magento.softwaretestingboard.com',
+      url: '',
       show: true,
       waitForNavigation: 'load',
       args: [
@@ -15,7 +15,7 @@ exports.config = {
     }
   }:{
     WebDriver : {
-      url: 'https://magento.softwaretestingboard.com',
+      url: '',
       smartWait: 5000,
       browser: "chrome",
       restart: false,
@@ -31,6 +31,14 @@ exports.config = {
           ]
         }
       }
+    }
+  },
+  multiple: {
+    browserGroup : {
+      browsers: [
+        { browser: "chromium"},
+        { browser: "firefox"}
+      ]
     }
   },
   mocha: {},
