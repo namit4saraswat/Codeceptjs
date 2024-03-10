@@ -8,7 +8,10 @@ exports.config = {
       browser: 'chromium',
       url: 'https://magento.softwaretestingboard.com',
       show: true,
-      waitForNavigation: 'load'
+      waitForNavigation: 'load',
+      args: [
+        `--load-extension=D:/Documents/Workspace/Codecept_Projects/UI Automation/assets/adblockpluschrome-3.8.4.2593.crx`
+      ]
     }
   }:{
     WebDriver : {
@@ -20,6 +23,13 @@ exports.config = {
       timeouts: {
         "script": 60000,
         "page load": 10000
+      },
+      desiredCapabilities: {
+        chromeOptions: {
+          args: [
+            `--load-extension=D:/Documents/Workspace/Codecept_Projects/UI Automation/assets/adblockpluschrome-3.8.4.2593.crx`
+          ]
+        }
       }
     }
   },
@@ -29,8 +39,11 @@ exports.config = {
   teardown: null,
   hooks: [],
   gherkin: {
-    features: './tests/features/*.feature',
-    steps: ['./tests/step_definitions/steps.js']
+    features: './tests/features/**/*.feature',
+    steps: [
+      './tests/step_definitions/element.steps.js',
+      './tests/step_definitions/home.steps.js'
+    ]
   },
   plugins: {
     screenshotOnFail: {
@@ -49,9 +62,9 @@ exports.config = {
   ],
   name: 'UI Automation',
   bootstrap: async function(){
-
+    // I.amOnPage(process.env.url)
   },
   bootstrapAll: async function(){
-
+    
   }
 }
